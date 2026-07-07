@@ -1,0 +1,9 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+<script>
+  const connection = new signalR.HubConnectionBuilder()
+    .withUrl("http://localhost:5287/hub/notifications")
+    .build();
+
+  connection.on("NewCandidate", (name) => alert("New candidate: " + name));
+  connection.start();
+</script>

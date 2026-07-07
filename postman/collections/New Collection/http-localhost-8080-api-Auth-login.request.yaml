@@ -1,0 +1,18 @@
+$kind: http-request
+name: http://localhost:8080/api/Auth/login
+description: ""
+url: http://localhost:8080/api/Auth/login?email=a&password=a
+method: POST
+queryParams:
+  - key: email
+    value: a
+    disabled: false
+    description: ""
+  - key: password
+    value: a
+    disabled: false
+    description: ""
+body:
+  type: json
+  content: ""
+order: 4426412015179066

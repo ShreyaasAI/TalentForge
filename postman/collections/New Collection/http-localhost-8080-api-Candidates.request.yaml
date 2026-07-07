@@ -1,0 +1,25 @@
+$kind: http-request
+name: http://localhost:8080/api/Candidates
+description: ""
+url: http://localhost:8080/api/Candidates
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\" : \"0\",\r
+
+    \    \"name\" : \"ui\",\r
+
+    \    \"email\" : \"rr@hi\",\r
+
+    \    \"yearsOfExperience\":3,\r
+
+    \    \"resumeUrl\" : \"\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 3916838741304974
