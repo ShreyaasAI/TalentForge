@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TalentForge.API/TalentForge.API.csproj" />
+  <Project Path="TalentForge.tests/TalentForge.tests.csproj" />
+</Solution>
