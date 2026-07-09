@@ -1,0 +1,23 @@
+$kind: http-request
+name: http://localhost:5287/api/Auth/login
+url: http://localhost:5287/api/Auth/login?email=1&password=1
+method: POST
+queryParams:
+  email: "1"
+  password: "1"
+body:
+  type: json
+  content: "{\r
+
+    \  \"email\" : \"1\",\r
+
+    \  \"password\" : \"1\"\r
+
+    }\r
+
+    \r\n"
+auth:
+  type: bearer
+  credentials:
+    token: "{{token}}"
+order: 1783418232900

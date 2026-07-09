@@ -1,0 +1,4 @@
+name: TalentForge
+values:
+  - key: token
+    secret: true
