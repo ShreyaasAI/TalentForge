@@ -52,6 +52,11 @@ builder.Services.AddSwaggerGen(c =>
     });
     c.OperationFilter<SecurityRequirementsOperationFilter>();
 });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
 builder.Services.AddScoped<ICandidateRepository, CandidateRepository>();
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 // builder.Services.AddScoped<IDistributedCache, DistributedCache>();
@@ -66,6 +71,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseCors("AllowAll");
 app.MapControllers(); 
 app.MapHub<NotificationHub>("/hub/notifications");
 app.UseHangfireDashboard("/hangfire");
